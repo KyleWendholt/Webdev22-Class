@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <script src="https://kit.fontawesome.com/8e13e7c455.js" crossorigin="anonymous"></script>
+
+    <style>
+        .container{
+            margin: 40px 25px;
+        }
+        .column{
+            margin: 10px;
+            padding: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div class = "container">
+        <div class="columns">
+            <div class="column">
+                <div class="card">
+                    <header class="card-header">
+                        <p class="card-header-title">
+                            Component
+                        </p>
+                        <button class="card-header-icon" aria-label="more options">
+                            <span class="icon">
+                                <i class="fas fa-angle-down" aria-hidden="true"></i>
+                            </span>
+                        </button>
+                    </header>
+                    <div class="card-content">
+                        <div class="content">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris. <a>@bulmaio</a>.
+                            <a>#css</a> <a>#responsive</a>
+                            11:09 PM - 1 Jan 2016
+                        </div>
+                    </div>
+                    <footer class="card-footer">
+                        <a href="#" class="card-footer-item">Save</a>
+                        <a href="#" class="card-footer-item">Edit</a>
+                        <a href="#" class="card-footer-item">Delete</a>
+                    </footer>
+                </div>
+            </div>
+            <div class="column is-half">
+                <div class="panel">
+                    <div class="tabs is-boxed">
+                        <ul>
+                            <li class="is-active">
+                                <a>
+                                    <span class="icon"><i class="fas fa-clipboard-list" aria-hidden="true"></i></span>
+                                    <span>Current</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <span class="icon"><i class="fas fa-calendar-xmark" aria-hidden="true"></i></span>
+                                    <span>Completed</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <span class="icon"><i class="fas fa-calendar-day" aria-hidden="true"></i></span>
+                                    <span>Upcoming</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <span class="icon"><i class="fas fa-calendar" aria-hidden="true"></i></span>
+                                    <span>All</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="panel-block">
+                        <p class="control has-icons-left">
+                            <input class="input is-primary" type="text" placeholder="New Task">
+                            <span class="icon is-left">
+                                <i class="fas fa-calendar-plus" aria-hidden="true"></i>
+                            </span>
+                        </p>
+                    </div>
+                    <label class="panel-block">
+                        <input type="checkbox" checked>
+                        Make Bulma great again
+                    </label>
+                    <label class="panel-block">
+                        <input type="checkbox">
+                        Add some more features
+                    </label>
+                    <label class="panel-block">
+                        <input type="checkbox">
+                        Make a github account
+                    </label>
+                    <label class="panel-block">
+                        <input type="checkbox">
+                        Learn how to use github
+                    </label>
+                    <label class="panel-block">
+                        <input type="checkbox">
+                        Add a .gitignore file
+                    </label>
+                    </div>
+                </div>
+                
+            <div class="column">
+                <div class="menu">
+                    <h1 class="title">Table of contents</h1>
+                    <h2 class="subtitle">Intra-page navigation</h2>
+                    <p class="menu-label">
+                        General
+                    </p>
+                    <ul class="menu-list">
+                        <li><a>Dashboard</a></li>
+                        <li><a>Customers</a></li>
+                    </ul>
+                    <p class="menu-label">
+                        Administration
+                    </p>
+                    <ul class="menu-list">
+                        <li><a>Team Settings</a></li>
+                        <li>
+                            <a class="is-active">Manage Your Team</a>
+                            <ul>
+                                <li><a>Members</a></li>
+                                <li><a>Plugins</a></li>
+                                <li><a>Add a member</a></li>
+                            </ul>
+                        </li>
+                        <li><a>Invitations</a></li>
+                        <li><a>Cloud Storage Environment Settings</a></li>
+                        <li><a>Authentication</a></li>
+                    </ul>
+                    <p class="menu-label">
+                        Transactions
+                    </p>
+                    <ul class="menu-list">
+                        <li><a>Payments</a></li>
+                        <li><a>Transfers</a></li>
+                        <li><a>Balance</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
