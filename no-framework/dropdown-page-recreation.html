@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+            background-color: rgb(235, 255, 241);
+        }
+        header{
+            background-color: rgb(4, 153, 4);
+        }
+        .tab, .menu div{
+            padding: 5px;
+            padding-left: 10px;
+            display: inline-block;
+            width: 75px;
+            font-size: large;
+            font-weight: bold;
+            font-family: sans-serif;
+            margin: 0px;
+        }
+        .clickable{
+            font-weight: normal;
+        }
+        .tab:hover{
+            background-color: rgb(38, 185, 38);
+        }
+        .pink{
+            background-color: pink;
+        }
+        .menu{
+            display: none;
+            background-color: rgb(38, 185, 38);
+            position: absolute;
+            margin-left: -10px;
+            margin-top: 5px;
+        }
+        .tab:hover .menu{
+            display:block;
+        }
+        .menu div{
+            display: block;
+            font-weight: 100;
+        }
+        .menu div:hover{
+            background-color: rgb(45, 221, 45);
+        }
+        .menu a{
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .container{
+            margin: auto;
+        }
+        .box{
+            max-width: 1100px;
+            background-color: white;
+            border-left: 5px solid;
+            padding: 5px 10px;
+            font-family: sans-serif;
+            margin: 20px;
+        }
+        .box-1{
+            border-color: rgb(38, 185, 38);
+        }
+        .box-2{
+            border-color: rgb(241, 241, 0);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="tab">
+            <a>File</a>
+            <div class="menu">
+                <div>
+                    <a href="">New</a>
+                </div>
+                <div>
+                    <a href = "">Open</a>
+                </div>
+                <div>
+                    <a href = "">Save</a>
+                </div>
+                <div>
+                    <a href = "">Print</a>
+                </div>
+                <div>
+                    <a href = "">Close</a>
+                </div>
+            </div>
+        </div>
+        <div class="clickable tab">
+            <a>Edit</a>
+            <div class="menu">
+                <div>
+                    <a href = "">Undo</a>
+                </div>
+                <div>
+                    <a href = "">Redo</a>
+                </div>
+                <div>
+                    <a href = "">Cut</a>
+                </div>
+                <div>
+                    <a href = "">Copy</a>
+                </div>
+                <div>
+                    <a href = "">Paste</a>
+                </div>
+                <div>
+                    <a href = "">Delete</a>
+                </div>
+                <div>
+                    <a href = "">Select All</a>
+                </div>
+            </div>
+        </div>        
+        <div class="tab">
+            <a>View</a>
+            <div class="menu">
+                <div>
+                    <a href = "">Zoom In</a>
+                </div>
+                <div>
+                    <a href = "">Zoom Out</a>
+                </div>
+                <div>
+                    <a href = "">Actual Size</a>
+                </div>
+                <div>
+                    <a href = "">Fit Page</a>
+                </div>
+                <div>
+                    <a href = "">Fit Width</a>
+                </div>
+                <div>
+                    <a href = "">Fit Height</a>
+                </div>
+                <div>
+                    <a href = "">Rotate Left</a>
+                </div>
+                <div>
+                    <a href="">Rotate Right</a>
+                </div>
+                <div>
+                    <a href="">Full Screen</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="box box-1">
+            <h2>Instructions</h2>
+            <p>Recreate this page using <b><i>only CSS</i></b>. Do yourself a favor and 1) Do not view the source. Figure it out
+                yourself. 2) Do not search for the solution. Learn CSS until you know enough to do this.</p>
+        </div>
+        <div class="box box-2">
+            <h2>Extra Credit</h2>
+            <p>Notice how the Edit menu (besides for not being bold) reacts to clicks. If you click the edit menu, it remains
+                open until you click somewhere else. (This you might need to search for)</p>
+        </div>
+    </div>
+
+</body>
+</html>
