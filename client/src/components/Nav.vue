@@ -43,7 +43,7 @@ let isActive = ref(false);
 
             <div class="navbar-dropdown">
               <router-link to="/about" class="navbar-item"> About </router-link>
-              <a class="navbar-item"> Jobs </a>
+              <router-link to="/Products" class="navbar-item"> Products </router-link>
               <a class="navbar-item"> Contact </a>
               <hr class="navbar-divider" />
               <a class="navbar-item"> Report an issue </a>
