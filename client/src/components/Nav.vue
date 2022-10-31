@@ -1,10 +1,15 @@
 <script setup lang="ts">
 import { ref } from "vue";
+import { RouterLink } from "vue-router";
+import Cart from "./Cart.vue";
+import LoginBadge from "./LoginBadge.vue";
 
-let isActive = ref(false);
+const isActive = ref(false);
+const isCartOpen = ref(false);
 </script>
 
 <template>
+  <Cart :is-open="isCartOpen" />
   <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
     <div class="container">
       <div class="navbar-brand">
@@ -30,20 +35,24 @@ let isActive = ref(false);
         </a>
       </div>
 
-      <div id="navbarBasicExample" class="navbar-menu">
+      <div
+        id="navbarBasicExample"
+        class="navbar-menu"
+        :class="{ 'is-active': isActive }"
+      >
         <div class="navbar-start">
           <router-link to="/" class="navbar-item"> Home </router-link>
 
-          <router-link to="/store" class="navbar-item" href="/store">
-            Store
+          <router-link class="navbar-item" to="/products">
+            Products
           </router-link>
 
           <div class="navbar-item has-dropdown is-hoverable">
             <a class="navbar-link"> More </a>
 
             <div class="navbar-dropdown">
-              <router-link to="/about" class="navbar-item"> About </router-link>
-              <router-link to="/Products" class="navbar-item"> Products </router-link>
+              <router-link class="navbar-item" to="/about"> About </router-link>
+              <a class="navbar-item"> Jobs </a>
               <a class="navbar-item"> Contact </a>
               <hr class="navbar-divider" />
               <a class="navbar-item"> Report an issue </a>
@@ -53,12 +62,12 @@ let isActive = ref(false);
 
         <div class="navbar-end">
           <div class="navbar-item">
-            <div class="buttons">
-              <a class="button is-primary">
-                <strong>Sign up</strong>
-              </a>
-              <a class="button is-light"> Log in </a>
-            </div>
+            <button class="button is-primary" @click="isCartOpen = !isCartOpen">
+              <strong>Cart</strong>
+            </button>
+          </div>
+          <div class="navbar-item">
+            <login-badge></login-badge>
           </div>
         </div>
       </div>
@@ -68,7 +77,6 @@ let isActive = ref(false);
 
 <style>
 .router-link-active {
-  border-bottom: #00AA00 5px solid;
-
+  border-bottom: #00aa00 5px solid;
 }
 </style>
