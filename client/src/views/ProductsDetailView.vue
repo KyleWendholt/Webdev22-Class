@@ -6,7 +6,8 @@ import { getProduct } from "../stores/products";
 
 const route = useRoute();
 
-const product = ref(getProduct(+route.params.id));
+const product = ref(null as Product | null);
+getProduct(+route.params.id).then((x) => (product.value = x));
 </script>
 
 <template>
