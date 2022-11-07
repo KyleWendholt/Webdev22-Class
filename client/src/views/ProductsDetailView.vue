@@ -2,7 +2,7 @@
 import { ref } from "vue";
 import { useRoute } from "vue-router";
 
-import { getProduct } from "../stores/products";
+import { getProduct, type Product } from "../stores/products";
 
 const route = useRoute();
 
