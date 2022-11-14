@@ -1,7 +1,7 @@
 import myFetch from '../services/myFetch';
 
 export function getProducts() {
-  return myFetch<ProductDocument>('products')
+  return myFetch<ListEnvelope<Product>>('products')
     .then( x=> x.products);
 }
 
@@ -13,8 +13,8 @@ export function deleteProduct(id: number) {
   data.products = data.products.filter((product) => product.id !== id);
 }
 
-export interface ProductDocument {
-  products: Product[];
+export interface ListEnvelope<T> {
+  products: [];
   total: number;
   skip: number;
   limit: number;

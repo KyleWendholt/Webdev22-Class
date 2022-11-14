@@ -4,11 +4,11 @@ import { reactive, ref } from "vue";
 import { RouterLink } from "vue-router";
 import { getProducts, type Product } from "../stores/products";
 
-const products = ref([] as Product[]);
-getProducts().then( x=> products.value = x);
+// const products = ref([] as Product[]);
+// getProducts().then( x=> products.value = x);
 
-// const products = reactive([] as Product[]);
-// getProducts().then( x=> products.push(...x));
+const products = reactive([] as Product[]);
+getProducts().then( x=> products.push(...x.products));
 
 const search = ref("");
 
