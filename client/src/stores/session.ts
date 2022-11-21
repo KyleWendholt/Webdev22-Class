@@ -1,16 +1,25 @@
 import { reactive } from "vue";
 
 const session = reactive({
-  user: null as null | User,
+  user: null as User | null,
 });
-export function login(firstName: string, lastName: string){
+
+export function login(name: string, email: string, password: string) {
   session.user = {
-    firstName,
-    lastName,
+    name,
+    email,
+    password,
   };
 }
-export class User{
-  public firstName?: string;
-  public lastName?: string;
+
+export function logout() {
+  session.user = null;
 }
-export default session
+
+export interface User {
+  name: string;
+  email: string;
+  password?: string;
+}
+
+export default session;
